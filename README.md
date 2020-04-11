@@ -6,7 +6,11 @@ This project is performing the end two end (e2e) business rules application and 
 
 ### Prerequisites
 
-Before running, dependencies must be downloaded and then project compiled
+Before running, dependencies must be downloaded and then project compiled with Maven
+
+```
+ mvn clean install
+```
 
 ## Running the tests
 
@@ -34,5 +38,5 @@ The execution may be monitored by the console, the script is constantly throwing
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License
 
