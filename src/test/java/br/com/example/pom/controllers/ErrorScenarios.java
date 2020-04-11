@@ -20,17 +20,13 @@ public class ErrorScenarios {
     @Value("${sandbox.user.api}")
     private String user;
 
-    @Value("${sandbox.hash.api}")
-    private String hash;
-
     @Value("${sandbox.token.api}")
     private String token;
 
     private static final String URL = "https://sandbox.moip.com.br/";
 
     private Logger logger = LoggerFactory.getLogger(ErrorScenarios.class);
-    private String customerId;
-    private String orderId;
+
 
     /**
      * Esse método realiza a verificação do tratamento de CPF invalido contendo mais digitos que o permitido
@@ -67,6 +63,11 @@ public class ErrorScenarios {
 
     }
 
+    /**
+     * Foi identificado um erro inexperado tendo StatusCode 500 em um cenario que era esperado 400
+     * O erro ocorre quando é passado uma quantidade especifica de caracteres no atributo ownId
+     * É gerado um Log dentro da pasta target/jbehave
+     */
     public void validateMaxLengthOwnId() {
 
         CustomerRequest customerRequest = Mock.customerRequestMock();
